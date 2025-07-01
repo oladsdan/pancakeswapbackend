@@ -13,12 +13,40 @@ const PORT = process.env.PORT || config.apiPort;
 // Global variable to store current signals (for API endpoint)
 let currentSignals = [];
 
+const allowedOrigins = [
+  'http://localhost:5173', // For your local frontend development
+  'http://localhost:3000'  // If your frontend runs on 3000 for some reason
+  // Add your Vercel frontend URL here when deployed!
+  // Example: 'https://your-frontend-app.vercel.app'
+  // It's best to get this from an environment variable in production
+];
+const productionFrontendUrl = process.env.FRONTEND_VERCEL_URL;
+if (productionFrontendUrl) {
+    allowedOrigins.push(productionFrontendUrl);
+}
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    // or if the origin is in our allowed list.
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods
+  credentials: true, // If you're sending cookies or authorization headers
+  optionsSuccessStatus: 204 // Some legacy browsers (IE11, various SmartTVs) choke on 200
+};
+
 // Middleware
-app.use(cors()); // Allow frontend to access API
+app.use(cors(corsOptions)); // Allow frontend to access API
 app.use(express.json()); // Enable JSON body parsing for requests (if needed)
 
 // This map will store the last buy signal info for display on the frontend
 const lastBuySignalsDisplay = new Map();
+
 
 /**
  * The main loop to fetch data, generate signals, and store history.
