@@ -21,10 +21,8 @@ let restartTimeoutId = null;
 
 const allowedOrigins = [
   'http://localhost:5173', // For your local frontend development
-  'http://localhost:3000'  // If your frontend runs on 3000 for some reason
-  // Add your Vercel frontend URL here when deployed!
-  // Example: 'https://your-frontend-app.vercel.app'
-  // It's best to get this from an environment variable in production
+  'http://localhost:3000', // If your frontend runs on 3000 for some reason
+  'https://pancakeswapfront.vercel.app/'
 ];
 const productionFrontendUrl = process.env.FRONTEND_VERCEL_URL;
 if (productionFrontendUrl) {
