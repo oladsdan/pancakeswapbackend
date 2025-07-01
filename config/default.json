@@ -1,0 +1,832 @@
+{
+  "apiPort": 3000,
+  "refreshIntervalMs": 120000,
+  "historyRetentionLimit": 200,
+
+  "dexscreenerApiSearchBaseUrl": "https://api.dexscreener.com/latest/dex/search", 
+  "targetChainId": "bsc",
+  "baseCurrencySymbol": "BUSD",
+  "baseCurrencyAddress": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+  "preferredQuoteTokenSymbols": ["BUSD"],
+   "quoteTokenMap": { 
+    "WBNB": "0xbb4CdB9eD9B89d1BC54bdcEDd7b2d49a37c41cAb",
+    "BUSD": "0xe9e7cea3dedcA5984780Bafc599bD69ADd087D56" 
+  },
+
+  "bscRpcUrl": "https://bsc-dataseed.binance.org/",
+  "pancakeSwapWBNBBUSDPairAddress": "0x58F876857a02D6762E0101bb5946DEF7bbF0b1Ab",
+  "pancakeSwapQuoterV2Address": "0x88C43FfE71D00e0A24A66099D64C59218dD953F8",
+
+  "pancakeSwapSubgraphUrl": "https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v2",
+  "subgraphFetchIntervalHours": 1,
+  "subgraphLookbackDays": 7,
+  "dexscreenerCallDelayMs": 250,
+
+  "monitoredTokens": [
+    {
+      "symbol": "TUT",
+      "name": "TUT",
+      "address": "0xCAAE2A2F939F51d97CdFa9A86e79e3F085b799f3",
+      "decimals": 18
+    },
+    {
+      "symbol": "WIF",
+      "name": "WIF",
+      "address": "0x2DCE707c47Fd9C0f1833A281F45e3e41Ace2725B",
+      "decimals": 18
+    },
+    {
+      "symbol": "COOKIE",
+      "name": "COOKIE",
+      "address": "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F",
+      "decimals": 18
+    },
+    {
+      "symbol": "JASMY",
+      "name": "JASMY",
+      "address": "0x15669CF161946C09a8B207650BfBB00e3d8A2E3E",
+      "decimals": 18
+    },
+    {
+      "symbol": "HOME",
+      "name": "HOME",
+      "address": "0x4BfAa776991E85e5f8b1255461cbbd216cFc714f",
+      "decimals": 18
+    },
+    {
+      "symbol": "FET",
+      "name": "FET",
+      "address": "0x031b41e504677879370e9DBcF937283A8691Fa7f",
+      "decimals": 18
+    },
+    {
+      "symbol": "ONE",
+      "name": "Harmony",
+      "address": "0x04BAf95Fd4C52fd09a56D840bAEe0AB8D7357bf0",
+      "decimals": 18
+    },
+    {
+      "symbol": "BONK",
+      "name": "BONK",
+      "address": "0xA697e272a73744b343528C3Bc4702F2565b2F422",
+      "decimals": 18
+    },
+    {
+      "symbol": "CGPT",
+      "name": "CGPT",
+      "address": "0x9840652DC04fb9db2C43853633f0F62BE6f00f98",
+      "decimals": 18
+    },
+    {
+      "symbol": "HFT",
+      "name": "HFT",
+      "address": "0x44Ec807ce2F4a6F2737A92e985f318d035883e47",
+      "decimals": 18
+    },
+    {
+      "symbol": "FLOKI",
+      "name": "FLOKI",
+      "address": "0xfb5B838b6cfEEdC2873aB27866079AC55363D37E",
+      "decimals": 18
+    },
+    {
+      "symbol": "INJ",
+      "name": "INJ",
+      "address": "0xa2B726B1145A4773F68593CF171187d8EBe4d495",
+      "decimals": 18
+    },
+    {
+      "symbol": "AAVE",
+      "name": "Aave",
+      "address": "0xfb6115445Bff7b52FeB98650C87f44907E58f802",
+      "decimals": 18
+    },
+    {
+      "symbol": "C98",
+      "name": "C98",
+      "address": "0xaEC945e04baF28b135Fa7c640f624f8D90F1C3a6",
+      "decimals": 18
+    },
+    {
+      "symbol": "MANTA",
+      "name": "MANTA",
+      "address": "0x8581cc815e40615998F4561F3e24e68066293595",
+      "decimals": 18
+    },
+    {
+      "symbol": "ZK",
+      "name": "ZK",
+      "address": "0xC71B5F631354BE6853eFe9C3Ab6b9590F8302e81",
+      "decimals": 18
+    },
+    {
+      "symbol": "LISTA",
+      "name": "LISTA",
+      "address": "0xFceB31A79F71AC9CBDCF853519c1b12D379EdC46",
+      "decimals": 18
+    },
+    {
+      "symbol": "WOO",
+      "name": "WOO",
+      "address": "0x4691937a7508860F876c9c0a2a617E7d9E945D4B",
+      "decimals": 18
+    },
+    {
+      "symbol": "CHR",
+      "name": "CHR",
+      "address": "0xf9CeC8d50f6c8ad3Fb6dcCEC577e05aA32B224FE",
+      "decimals": 18
+    },
+    {
+      "symbol": "TKO",
+      "name": "TKO",
+      "address": "0x9f589e3eabe42ebC94A44727b3f3531C0c877809",
+      "decimals": 18
+    },
+    {
+      "symbol": "W",
+      "name": "W",
+      "address": "0x19683a9d2a31508847a026DfE77f53A05A084444",
+      "decimals": 18
+    },
+    {
+      "symbol": "NEAR",
+      "name": "NEAR Protocol",
+      "address": "0x1Fa4a73a3F0133f0025378af00236f3aBDEE5D63",
+      "decimals": 18
+    },
+    {
+      "symbol": "PEPE",
+      "name": "PEPE",
+      "address": "0x25d887Ce7a35172C62FeBFD67a1856F20FaEbB00",
+      "decimals": 18
+    },
+    {
+      "symbol": "ZRO",
+      "name": "ZRO",
+      "address": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+      "decimals": 18
+    },
+    {
+      "symbol": "SUSHI",
+      "name": "SUSHI",
+      "address": "0x947950BcC74888a40Ffa2593C5798F11Fc9124C4",
+      "decimals": 18
+    },
+    {
+      "symbol": "RDNT",
+      "name": "RDNT",
+      "address": "0xf7DE7E8A6bd59ED41a4b5fe50278b3B7f31384dF",
+      "decimals": 18
+    },
+    {
+      "symbol": "ALICE",
+      "name": "ALICE",
+      "address": "0xAC51066d7bEC65Dc4589368da368b212745d63E8",
+      "decimals": 18
+    },
+    {
+      "symbol": "LINK",
+      "name": "Chainlink",
+      "address": "0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD",
+      "decimals": 18
+    },
+    {
+      "symbol": "PEOPLE",
+      "name": "PEOPLE",
+      "address": "0x2c44b726ADF1963cA47Af88B284C06f30380fC78",
+      "decimals": 18
+    },
+    {
+      "symbol": "BAND",
+      "name": "BAND",
+      "address": "0xAD6cAEb32CD2c308980a548bD0Bc5AA4306c6c18",
+      "decimals": 18
+    },
+    {
+      "symbol": "DUSK",
+      "name": "DUSK",
+      "address": "0xB2BD0749DBE21f623d9BABa856D3B0f0e1BFEc9C",
+      "decimals": 18
+    },
+    {
+      "symbol": "TLM",
+      "name": "TLM",
+      "address": "0x2222227E22102Fe3322098e4CBfE18cFebD57c95",
+      "decimals": 18
+    },
+    {
+      "symbol": "EDU",
+      "name": "EDU",
+      "address": "0xBdEAe1cA48894A1759A8374D63925f21f2Ee2639",
+      "decimals": 18
+    },
+    {
+      "symbol": "BAKE",
+      "name": "BAKE",
+      "address": "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
+      "decimals": 18
+    },
+    {
+      "symbol": "MUBARAK",
+      "name": "MUBARAK",
+      "address": "0x5C85D6C6825aB4032337F11Ee92a72DF936b46F6",
+      "decimals": 18
+    },
+    {
+      "symbol": "HIGH",
+      "name": "HIGH",
+      "address": "0x5f4Bde007Dc06b867f86EBFE4802e34A1fFEEd63",
+      "decimals": 18
+    },
+    {
+      "symbol": "ORDI",
+      "name": "ORDI",
+      "address": "0xe2aE1a99bBd2eFab0a5C38f2146B7aCE61aBC5cE",
+      "decimals": 18
+    },
+    {
+      "symbol": "NFP",
+      "name": "NFP",
+      "address": "0x75E8ddB518bB757b4282cd5b83bb70d4101D12FB",
+      "decimals": 18
+    },
+    {
+      "symbol": "EGLD",
+      "name": "Elrond",
+      "address": "0xbF7c81FFF98BbE61B40Ed186e4AfD6DDd01337fe",
+      "decimals": 18
+    },
+    {
+      "symbol": "PENDLE",
+      "name": "PENDLE",
+      "address": "0xb3Ed0A426155B79B898849803E3B36552f7ED507",
+      "decimals": 18
+    },
+    {
+      "symbol": "ANKR",
+      "name": "ANKR",
+      "address": "0xf307910A4c7bbc79691fD374889b36d8531B08e3",
+      "decimals": 18
+    },
+    {
+      "symbol": "LTO",
+      "name": "LTO",
+      "address": "0x857B222Fc79e1cBBf8Ca5f78CB133d1b7CF34BBd",
+      "decimals": 18
+    },
+    {
+      "symbol": "ONT",
+      "name": "ONT",
+      "address": "0xFd7B3A77848f1C2D67E05E54d78d174a0C850335",
+      "decimals": 18
+    },
+    {
+      "symbol": "RESOLV",
+      "name": "RESOLV",
+      "address": "0xdA6CEF7F667d992A60EB823Ab215493aA0c6b360",
+      "decimals": 18
+    },
+    {
+      "symbol": "ADX",
+      "name": "ADX",
+      "address": "0x6bfF4Fb161347ad7de4A625AE5aa3A1CA7077819",
+      "decimals": 18
+    },
+    {
+      "symbol": "SOPH",
+      "name": "SOPH",
+      "address": "0x31DbA3c96481FDe3CD81C2aaF51F2D8bf618C742",
+      "decimals": 18
+    },
+    {
+      "symbol": "METIS",
+      "name": "METIS",
+      "address": "0xe552Fb52a4F19e44ef5A967632DBc320B0820639",
+      "decimals": 18
+    },
+    {
+      "symbol": "QI",
+      "name": "QI",
+      "address": "0x8729438EB15e2C8B576fCc6AeCdA6A148776C0F5",
+      "decimals": 18
+    },
+    {
+      "symbol": "MBOX",
+      "name": "MBOX",
+      "address": "0x3203c9E46cA618C8C1cE5dC67e7e9D75f5da2377",
+      "decimals": 18
+    },
+    {
+      "symbol": "VET",
+      "name": "VeChain",
+      "address": "0x6FDcdfef7c496407cCb0cEC90f9C5Aaa1Cc8D888",
+      "decimals": 18
+    },
+    {
+      "symbol": "AXS",
+      "name": "Axie Infinity",
+      "address": "0x715D400F88C167884bbCc41C5FeA407ed4D2f8A0",
+      "decimals": 18
+    },
+    {
+      "symbol": "YFI",
+      "name": "YFI",
+      "address": "0x88f1A5ae2A3BF98AEAF342D26B30a79438c9142e",
+      "decimals": 18
+    },
+    {
+      "symbol": "ARPA",
+      "name": "ARPA",
+      "address": "0x6F769E65c14Ebd1f68817F5f1DcDb61Cfa2D6f7e",
+      "decimals": 18
+    },
+    {
+      "symbol": "STO",
+      "name": "STO",
+      "address": "0xdAf1695c41327b61B9b9965Ac6A5843A3198cf07",
+      "decimals": 18
+    },
+    {
+      "symbol": "BSW",
+      "name": "BSW",
+      "address": "0x965F527D9159dCe6288a2219DB51fc6Eef120dD1",
+      "decimals": 18
+    },
+    {
+      "symbol": "CTK",
+      "name": "CTK",
+      "address": "0xA8c2B8eec3d368C0253ad3dae65a5F2BBB89c929",
+      "decimals": 18
+    },
+    {
+      "symbol": "HOOK",
+      "name": "HOOK",
+      "address": "0xa260E12d2B924cb899AE80BB58123ac3fEE1E2F0",
+      "decimals": 18
+    },
+    {
+      "symbol": "ACE",
+      "name": "ACE",
+      "address": "0xc27A719105A987b4c34116223CAE8bd8F4B5def4",
+      "decimals": 18
+    },
+    {
+      "symbol": "AI",
+      "name": "AI",
+      "address": "0x2598c30330D5771AE9F983979209486aE26dE875",
+      "decimals": 18
+    },
+    {
+      "symbol": "ID",
+      "name": "ID",
+      "address": "0x2dfF88A56767223A5529eA5960Da7A3F5f766406",
+      "decimals": 18
+    },
+    {
+      "symbol": "ATA",
+      "name": "ATA",
+      "address": "0xA2120b9e674d3fC3875f415A7DF52e382F141225",
+      "decimals": 18
+    },
+    {
+      "symbol": "ALPHA",
+      "name": "ALPHA",
+      "address": "0xa1faa113cbE53436Df28FF0aEe54275c13B40975",
+      "decimals": 18
+    },
+    {
+      "symbol": "MANA",
+      "name": "Decentraland",
+      "address": "0x26433c8127d9b4e9B71Eaa15111DF99Ea2EeB2f8",
+      "decimals": 18
+    },
+    {
+      "symbol": "CYBER",
+      "name": "CYBER",
+      "address": "0x14778860E937f509e651192a90589dE711Fb88a9",
+      "decimals": 18
+    },
+    {
+      "symbol": "APE",
+      "name": "APE",
+      "address": "0xC762043E211571eB34f1ef377e5e8e76914962f9",
+      "decimals": 18
+    },
+    {
+      "symbol": "UNI",
+      "name": "Uniswap",
+      "address": "0xBf5140A22578168FD562DCcF235E5D43A02ce9B1",
+      "decimals": 18
+    },
+    {
+      "symbol": "BEL",
+      "name": "BEL",
+      "address": "0x8443f091997f06a61670B735ED92734F5628692F",
+      "decimals": 18
+    },
+    {
+      "symbol": "SAND",
+      "name": "The Sandbox",
+      "address": "0x67b725d7e342d7B611fa85e859Df9697D9378B2e",
+      "decimals": 18
+    },
+    {
+      "symbol": "BAT",
+      "name": "Basic Attention Token",
+      "address": "0x101d82428437127bF1608F699CD651e6Abf9766E",
+      "decimals": 18
+    },
+    {
+      "symbol": "GMT",
+      "name": "GMT",
+      "address": "0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1",
+      "decimals": 18
+    },
+    {
+      "symbol": "SHIB",
+      "name": "Shiba Inu",
+      "address": "0x2859e4544C4bB03966803b044A93563Bd2D0DD4D",
+      "decimals": 18
+    },
+    {
+      "symbol": "ZIL",
+      "name": "ZIL",
+      "address": "0xb86AbCb37C3A4B64f74f59301AFF131a1BEcC787",
+      "decimals": 18
+    },
+    {
+      "symbol": "DODO",
+      "name": "DODO",
+      "address": "0x67ee3Cb086F8a16f34beE3ca72FAD36F7Db929e2",
+      "decimals": 18
+    },
+    {
+      "symbol": "AVAX",
+      "name": "Avalanche",
+      "address": "0x1CE0c2827e2eF14D5C4f29a091d735A204794041",
+      "decimals": 18
+    },
+    {
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "address": "0x1Ba42e5193dfA8B03D15dd1B86a3113bbBEF8Eeb",
+      "decimals": 18
+    },
+    {
+      "symbol": "PORTO",
+      "name": "PORTO",
+      "address": "0x49f2145d6366099e13B10FbF80646C0F377eE7f6",
+      "decimals": 18
+    },
+    {
+      "symbol": "HYPER",
+      "name": "HYPER",
+      "address": "0xC9d23ED2ADB0f551369946BD377f8644cE1ca5c4",
+      "decimals": 18
+    },
+    {
+      "symbol": "IOTX",
+      "name": "IOTX",
+      "address": "0x9678E42ceBEb63F23197D726B29b1CB20d0064E5",
+      "decimals": 18
+    },
+    {
+      "symbol": "COS",
+      "name": "COS",
+      "address": "0x96Dd399F9c3AFda1F194182F71600F1B65946501",
+      "decimals": 18
+    },
+    {
+      "symbol": "CAKE",
+      "name": "PancakeSwap",
+      "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+      "decimals": 18
+    },
+    {
+      "symbol": "ASR",
+      "name": "ASR",
+      "address": "0x80D5f92C2c8C682070C95495313dDB680B267320",
+      "decimals": 18
+    },
+    {
+      "symbol": "XVS",
+      "name": "XVS",
+      "address": "0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63",
+      "decimals": 18
+    },
+    {
+      "symbol": "SHELL",
+      "name": "SHELL",
+      "address": "0xf2c88757f8d03634671208935974B60a2a28Bdb3",
+      "decimals": 18
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+      "decimals": 18
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "address": "0x570A5D26f7765Ecb712C0924E4De545B89fD43dF",
+      "decimals": 18
+    },
+    {
+      "symbol": "FIL",
+      "name": "Filecoin",
+      "address": "0x0D8Ce2A99Bb6e3B7Db580eD848240e4a0F9aE153",
+      "decimals": 18
+    },
+    {
+      "symbol": "WBETH",
+      "name": "WBETH",
+      "address": "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
+      "decimals": 18
+    },
+    {
+      "symbol": "TRUMP",
+      "name": "TRUMP",
+      "address": "0x4eA98c1999575aaadfb38237Dd015c5E773F75a2",
+      "decimals": 18
+    },
+    {
+      "symbol": "FORM",
+      "name": "FORM",
+      "address": "0x5b73A93b4E5e4f1FD27D8b3F8C97D69908b5E284",
+      "decimals": 18
+    },
+    {
+      "symbol": "XTZ",
+      "name": "Tezos",
+      "address": "0x16939ef78684453bfDFb47825F8a5F714f12623a",
+      "decimals": 18
+    },
+    {
+      "symbol": "SXP",
+      "name": "SXP",
+      "address": "0x47BEAd2563dCBf3bF2c9407fEa4dC236fAbA485A",
+      "decimals": 18
+    },
+    {
+      "symbol": "LAZIO",
+      "name": "LAZIO",
+      "address": "0x77d547256A2cD95F32F67aE0313E450Ac200648d",
+      "decimals": 18
+    },
+    {
+      "symbol": "SANTOS",
+      "name": "SANTOS",
+      "address": "0xA64455a4553C9034236734FadDAddbb64aCE4Cc7",
+      "decimals": 18
+    },
+    {
+      "symbol": "ATOM",
+      "name": "Cosmos",
+      "address": "0x0Eb3a705fc54725037CC9e008bDede697f62F335",
+      "decimals": 18
+    },
+    {
+      "symbol": "JUV",
+      "name": "JUV",
+      "address": "0xC40C9A843E1c6D01b7578284a9028854f6683b1B",
+      "decimals": 18
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "address": "0xbA2aE424d960c26247Dd6c32edC70B295c744C43",
+      "decimals": 18
+    },
+    {
+      "symbol": "TST",
+      "name": "TST",
+      "address": "0x86Bb94DdD16Efc8bc58e6b056e8df71D9e666429",
+      "decimals": 18
+    },
+    {
+      "symbol": "STG",
+      "name": "STG",
+      "address": "0xB0D502E938ed5f4df2E681fE6E419ff29631d62b",
+      "decimals": 18
+    },
+    {
+      "symbol": "QKC",
+      "name": "QKC",
+      "address": "0xA1434F1FC3F437fa33F7a781E041961C0205B5Da",
+      "decimals": 18
+    },
+    {
+      "symbol": "COMP",
+      "name": "COMP",
+      "address": "0x52CE071Bd9b1C4B00A0b92D298c512478CaD67e8",
+      "decimals": 18
+    },
+    {
+      "symbol": "ACH",
+      "name": "ACH",
+      "address": "0xBc7d6B50616989655AfD682fb42743507003056D",
+      "decimals": 18
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "address": "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47",
+      "decimals": 18
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "address": "0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE",
+      "decimals": 18
+    },
+    {
+      "symbol": "MASK",
+      "name": "MASK",
+      "address": "0x2eD9a5C8C13b93955103B9a7C167B67Ef4d568a3",
+      "decimals": 18
+    },
+    {
+      "symbol": "DOT",
+      "name": "Polkadot",
+      "address": "0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402",
+      "decimals": 18
+    },
+    {
+      "symbol": "NXPC",
+      "name": "NXPC",
+      "address": "0xf2b51CC1850fEd939658317a22d73d3482767591",
+      "decimals": 18
+    },
+    {
+      "symbol": "BIFI",
+      "name": "BIFI",
+      "address": "0xCa3F508B8e4Dd382eE878A314789373D80A5190A",
+      "decimals": 18
+    },
+    {
+      "symbol": "SPK",
+      "name": "SPK",
+      "address": "0xAfF2e841851700D1Fc101995Ee6b81Ae21Bb87D7",
+      "decimals": 18
+    },
+    {
+      "symbol": "PHA",
+      "name": "PHA",
+      "address": "0x0112e557d400474717056C4e6D40eDD846F38351",
+      "decimals": 18
+    },
+    {
+      "symbol": "HAEDAL",
+      "name": "HAEDAL",
+      "address": "0x3D9bE0aC1001cd81c32464276D863d2FFdCa4967",
+      "decimals": 18
+    },
+    {
+      "symbol": "MBL",
+      "name": "MBL",
+      "address": "0x18E37F96628dB3037d633FE4D469Fb1933a63C5B",
+      "decimals": 18
+    },
+    {
+      "symbol": "PARTI",
+      "name": "PARTI",
+      "address": "0x59264f02D301281f3393e1385c0aEFd446Eb0F00",
+      "decimals": 18
+    },
+    {
+      "symbol": "AXL",
+      "name": "AXL",
+      "address": "0x8b1f4432F943c465A973FeDC6d7aa50Fc96f1f65",
+      "decimals": 18
+    },
+    {
+      "symbol": "TWT",
+      "name": "TWT",
+      "address": "0x4B0F1812e5Df2A09796481Ff14017e6005508003",
+      "decimals": 18
+    },
+    {
+      "symbol": "LTC",
+      "name": "Litecoin",
+      "address": "0x4338665CBB7B2485A8855A139b75D5e34AB0DB94",
+      "decimals": 18
+    },
+    {
+      "symbol": "PSG",
+      "name": "PSG",
+      "address": "0xBc5609612b7C44BEf426De600B5fd1379DB2EcF1",
+      "decimals": 18
+    },
+    {
+      "symbol": "ATM",
+      "name": "ATM",
+      "address": "0x25E9d05365c867E59C1904E7463Af9F312296f9E",
+      "decimals": 18
+    },
+    {
+      "symbol": "KAVA",
+      "name": "KAVA",
+      "address": "0x5F88AB06e8dfe89DF127B2430Bba4Af600866035",
+      "decimals": 18
+    },
+    {
+      "symbol": "WIN",
+      "name": "WIN",
+      "address": "0xaeF0d72a118ce24feE3cD1d43d383897D05B4e99",
+      "decimals": 18
+    },
+    {
+      "symbol": "WBTC",
+      "name": "WBTC",
+      "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+      "decimals": 18
+    },
+    {
+      "symbol": "DEGO",
+      "name": "DEGO",
+      "address": "0x3FdA9383A84C05eC8f7630Fe10AdF1fAC13241CC",
+      "decimals": 18
+    },
+    {
+      "symbol": "TRX",
+      "name": "TRON",
+      "address": "0xCE7de646e7208a4Ef112cb6ed5038FA6cC6b12e3",
+      "decimals": 18
+    },
+    {
+      "symbol": "OG",
+      "name": "OG",
+      "address": "0xf05E45aD22150677a017Fbd94b84fBB63dc9b44c",
+      "decimals": 18
+    },
+    {
+      "symbol": "BCH",
+      "name": "Bitcoin Cash",
+      "address": "0x8fF795a6F4D97E7887C79beA79aba5cc76444aDf",
+      "decimals": 18
+    },
+    {
+      "symbol": "DEXE",
+      "name": "DEXE",
+      "address": "0x6E88056E8376Ae7709496Ba64d37fa2f8015ce3e",
+      "decimals": 18
+    },
+    {
+      "symbol": "SFP",
+      "name": "SFP",
+      "address": "0xD41FDb03Ba84762dD66a0af1a6C8540FF1ba5dfb",
+      "decimals": 18
+    },
+    {
+      "symbol": "CHESS",
+      "name": "CHESS",
+      "address": "0x20de22029ab63cf9A7Cf5fEB2b737Ca1eE4c82A6",
+      "decimals": 18
+    },
+    {
+      "symbol": "SOLV",
+      "name": "SOLV",
+      "address": "0xabE8E5CabE24Cb36df9540088fD7cE1175b9bc52",
+      "decimals": 18
+    },
+    {
+      "symbol": "SIGN",
+      "name": "SIGN",
+      "address": "0x868FCEd65edBF0056c4163515dD840e9f287A4c3",
+      "decimals": 18
+    },
+    {
+      "symbol": "PROM",
+      "name": "PROM",
+      "address": "0xaF53d56ff99f1322515E54FdDE93FF8b3b7DAFd5",
+      "decimals": 18
+    },
+    {
+      "symbol": "BMT",
+      "name": "BMT",
+      "address": "0x7d814b9eD370Ec0a502EdC3267393bF62d891B62",
+      "decimals": 18
+    }
+  ],
+
+  "rsiOversold": 30,
+  "rsiOverbought": 70,
+  "indicatorPeriodRSI": 14,
+
+  "macdFastPeriod": 12,
+  "macdSlowPeriod": 26,
+  "macdSignalPeriod": 9,
+
+  "priceChangeLookbackMinutesShort": 5,
+  "priceChangeThresholdShort": 0.01,
+
+  "volumeLookbackMinutes": 60,
+  "volumeIncreaseFactor": 0.2,
+
+  "liquiditySlippageThresholdPercent": 2,
+
+  "priceChangeLookbackHoursPumped": 1,
+  "priceChangeThresholdPumped": 0.15
+}
