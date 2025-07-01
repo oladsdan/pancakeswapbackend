@@ -184,13 +184,18 @@ export async function getMarketData(tokenaddress, tokensymbol) {
             }
 
         } catch (error) {
+            if (error.response && error.response.status === 429) {
+                console.error("Dexscreener rate limit hit:", error.message);
+                throw { isRateLimit: true, message: "Dexscreener rate limit hit" };
+            }
             if (axios.isAxiosError(error) && error.response) {
                 console.error(`Dexscreener API error for ${queryString} (HTTP ${error.response.status}):`, error.response.data);
             } else {
                 console.error(`Failed to get market data for ${queryString} from Dexscreener:`, error.message);
             }
             // Continue to next quote symbol if there's an error for the current one
-            continue;
+            throw error; // Re-throw other errors
+            // continue;
         } finally {
             // Implement the delay AFTER each API call, whether it succeeded or failed
             if (DEXSCREENER_CALL_DELAY_MS > 0) {
