@@ -12,6 +12,7 @@ const PORT = process.env.PORT || config.apiPort;
 
 // Global variable to store current signals (for API endpoint)
 let currentSignals = [];
+let frontendSignals = [];
 const lastBuySignalsDisplay = new Map();
 
 let signalGenerationIntervalId = null;
@@ -163,6 +164,7 @@ async function signalGenerationLoop() {
     }
 
     currentSignals = allSignals;
+    frontendSignals = allSignals;
     isLoopRunning = false; // Reset flag after loop finishes
     console.log(`--- Signal Generation Loop Finished. ${allSignals.length} signals processed. ---`);
 
@@ -215,6 +217,13 @@ app.get('/api/signals', (req, res) => {
         res.json(currentSignals);
     }
 });
+
+app.get('api/generated-signals', (req, res) => {
+  if (frontendSignals.length === 0){
+    res.json("Kindly wait while we generate signal");
+  }
+  res.json(frontendSignals);
+}
 
 
 
